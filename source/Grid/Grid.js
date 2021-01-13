@@ -558,6 +558,7 @@ class Grid extends React.PureComponent<Props, State> {
     this._styleCache = {};
     this._cellCache = {};
 
+    console.log('forceUpdate');
     this.forceUpdate();
   }
 

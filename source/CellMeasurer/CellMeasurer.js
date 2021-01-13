@@ -126,7 +126,7 @@ export default class CellMeasurer extends React.PureComponent<Props> {
     }
   }
 
-  _measure = () => {
+  _measure = (e, next) => {
     const {
       cache,
       columnIndex = 0,
@@ -149,6 +149,8 @@ export default class CellMeasurer extends React.PureComponent<Props> {
         });
       }
     }
+
+    next && next();
   };
 
   _registerChild = element => {

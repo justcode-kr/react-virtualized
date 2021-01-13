@@ -32,10 +32,11 @@ export default class DynamicHeightList extends React.PureComponent {
         className={styles.BodyGrid}
         deferredMeasurementCache={this._cache}
         height={400}
-        overscanRowCount={0}
+        overscanRowCount={20}
         rowCount={1000}
         rowHeight={this._cache.rowHeight}
         rowRenderer={this._rowRenderer}
+        scrollToAlignment="start"
         width={width}
       />
     );
@@ -50,7 +51,7 @@ export default class DynamicHeightList extends React.PureComponent {
     const imageWidth = 300;
     const imageHeight = datum.size * (1 + (index % 3));
 
-    const source = `https://www.fillmurray.com/${imageWidth}/${imageHeight}`;
+    const source = `https://via.placeholder.com/${500}`;
 
     return (
       <CellMeasurer
